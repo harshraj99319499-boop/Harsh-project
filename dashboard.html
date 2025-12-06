@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNRS - Secure Number Recycling System</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-effects">
+        <div class="bg-grid"></div>
+        <div class="bg-glow"></div>
+    </div>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>SNRS Protocol</h1>
+            </div>
+            <div class="status-badge" id="system-status">SYSTEM ACTIVE</div>
+        </header>
+
+        <main>
+            <section class="control-panel">
+                <div class="card input-card">
+                    <h2>Initiate Recycling</h2>
+                    <p>Enter the mobile number to securely wipe and recycle.</p>
+                    <div class="input-group">
+                        <input type="text" id="phoneNumber" placeholder="+91 98765 43210" maxlength="14">
+                        <button id="startBtn" onclick="startSimulation()">
+                            <span class="btn-text">EXECUTE WIPE</span>
+                            <div class="btn-glitch"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card status-card">
+                    <h2>Operation Log</h2>
+                    <div class="terminal-window" id="consoleLog">
+                        <div class="log-line system">> SNAPSHOT: SNRS_CORE_V1.2 LOADED...</div>
+                        <div class="log-line system">> WAITING FOR INPUT...</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="visualization">
+                <div class="node telecom" id="node-telecom">
+                    <div class="icon">📡</div>
+                    <div class="label">Telecom Provider</div>
+                    <div class="status">Standby</div>
+                </div>
+
+                <div class="connection" id="conn-1">
+                    <div class="line"></div>
+                    <div class="data-packet"></div>
+                </div>
+
+                <div class="node central" id="node-snrs">
+                    <div class="icon">🛡️</div>
+                    <div class="label">SNRS Core</div>
+                    <div class="status">Idle</div>
+                </div>
+
+                <div class="connection-group">
+                    <div class="connection vertical" id="conn-2">
+                        <div class="line"></div>
+                        <div class="data-packet"></div>
+                    </div>
+                    <div class="connection vertical" id="conn-3">
+                        <div class="line"></div>
+                        <div class="data-packet"></div>
+                    </div>
+                    <div class="connection vertical" id="conn-4">
+                        <div class="line"></div>
+                        <div class="data-packet"></div>
+                    </div>
+                </div>
+
+                <div class="apps-grid">
+                    <div class="node app" id="app-messaging">
+                        <div class="icon">💬</div>
+                        <div class="label">Chat Apps</div>
+                        <div class="status">Waiting</div>
+                    </div>
+                    <div class="node app" id="app-banking">
+                        <div class="icon">🏦</div>
+                        <div class="label">Banking</div>
+                        <div class="status">Waiting</div>
+                    </div>
+                    <div class="node app" id="app-social">
+                        <div class="icon">🌐</div>
+                        <div class="label">Social ID</div>
+                        <div class="status">Waiting</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>SECURE NUMBER RECYCLING SYSTEM // PROTECTING USER PRIVACY</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
